@@ -1,0 +1,276 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kritika Garg | Resume</title>
+
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="styles.css">
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    </head>
+
+    <!-- <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"> -->
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<link rel="stylesheet" href="swiper-bundle.min.css">
+
+</head>
+
+<body>
+
+    <header class="header">
+    <a href="#" class="logo">Portfolio</a>
+
+    <nav class="navbar">
+        <a href="#home" class="active">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#work">Work</a>
+        <a href="#contact">Contact Me</a>
+        <!-- <i class='bx bx-cog' id="menu-icon"></i> -->
+        <a href="#" class="settings-icon"><i class='bx bx-cog' id="menu-icon"></i></a> <!-- Added settings icon link -->
+
+
+    </nav>
+</header>
+
+<!-- Sidebar -->
+<div class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+        <span class="close-btn" id="close-btn">&times;</span>
+        <h2>Settings</h2>
+    </div>
+    <ul class="sidebar-links">
+        <li>
+        <button id="theme-toggle" class="theme-btn">
+            <i class="fas fa-moon"></i> <!-- Default icon -->
+        </button>
+        </li>
+    </ul>
+</div>
+
+<!-- home section -->
+ <section class="home" id="home">
+    <div class="home-content">
+        <h3>Hello, Its me.</h3>
+        <h1>Kritika Garg</h1>
+        <h3>And I'm a <span class="typing">Fullstack Developer</span></h3>
+        <p> "Empowering innovation through code, building the future with every project." </p>
+
+        <div class="social-media">
+            <a href="#"><i class='bx bxl-instagram'></i></a>
+            <a href="https://x.com/kritikaagarg"><i class="bx bxl-twitter"></i></a>
+            <a href="https://www.linkedin.com/in/kritika-garg-14158a23b/"><i class="bx bxl-linkedin"></i></a>
+            <a href="https://github.com/kritikaspidy"><i class="bx  bxl-github"></i></a>
+        </div>
+        <a href="image/cv.pdf" class="btn" download="cv">Download Cv</a>
+    </div>
+
+    <div class="home-img">
+        <img src="image/myy.jpg" alt="">
+    </div>
+ </section>
+
+<!-- About section -->
+<section class="about" id="about">
+
+    <h2 class="heading">About <span>Me</span></h2>
+    <div class="about-container-grid">
+        <div class="about-data">
+            <p class="description">"A problem solver at heart, I specialize in crafting scalable web applications that deliver a smooth user experience.
+            With a focus on both functionality and design, I aim to transform ideas into intuitive, reliable, and impactful
+            solutions."</p>
+
+            <div class="about-info">
+
+                <!-- Qualification Box -->
+                <div class="about-box" onclick="flipCard(this)">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <i class='bx bxs-graduation'></i>
+                            <h3 class="tittle">Qualification</h3>
+                        </div>
+                        <div class="flip-card-back">
+                            <h1 class="subtittle">Chitkara University, Patiala (May'2026)</h1>
+                            <p>Bachelor of Technology in Software Engineering</p>
+                            <h1 class="subtittle">M.DAV Senior Secondary School, Ambala (2010-2022)</h1>
+                            <p>Matriculation</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Certification Box -->
+                <div class="about-box" onclick="flipCard(this)">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <i class='bx bx-badge-check'></i>
+                            <h3 class="tittle">Certification</h3>
+                        </div>
+                        <div class="flip-card-back">
+                            <span class="subtittle">Cisco Cyber Security</span>
+                            <p>January'2023-May'2023.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Me Box -->
+                <div class="about-box" onclick="flipCard(this)">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <i class='bx bx-support'></i>
+                            <h3 class="tittle">Contact me</h3>
+                        </div>
+                        <div class="flip-card-back">
+                            <p>Email: kritikagarg351@gmail.com</p>
+                            <p>Phone: 9896053531</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<!-- skills section -->
+ 
+<section class="skills" id="skills">
+    <h2 class="heading">Skills</h2>
+
+    <!-- Filter Buttons -->
+    <div class="filter-buttons">
+        <button class="filter-btn" onclick="filterSkills('all')">All Skills</button>
+        <button class="filter-btn" onclick="filterSkills('frontend')">Frontend</button>
+        <button class="filter-btn" onclick="filterSkills('backend')">Backend</button>
+        <button class="filter-btn" onclick="filterSkills('database')">Database</button>
+        <button class="filter-btn" onclick="filterSkills('Tools')">Tools</button>
+        <button class="filter-btn" onclick="filterSkills('VersionControl')">Version Control </button>
+    </div>
+
+    <!-- Skills List -->
+    <ul id="skills-list">
+        <li class="frontend">HTML</li>
+        <li class="frontend">CSS</li>
+        <li class="frontend">JavaScript</li>
+        <li class="frontend">React JS</li>
+        <li class="backend">Node.js</li>
+        <li class="backend">Express.js</li>
+        <li class="database">SQL</li>
+        <li class="database">PostgreSQL</li>
+        <li class="Tools">Agile (Srum)</li>
+        <li class="Tools">Jira</li>
+        <li class="VersionControl">Git</li>
+        <li class="VersionControl">GitHub</li>
+
+    </ul>
+</section>
+
+<!-- work section -->
+
+<section class="work" id="work">
+    <h2 class="heading">Work</h2>
+    <div class="swiper container">
+        <div class="swiper-wrapper">
+
+        <div class="card swiper-slide">
+            <img src="image/recipe.png" alt="image">
+            <h3 class="name">xyz</h3>
+            <p class="describe">it is a project</p>
+        </div>
+        <div class="card swiper-slide">
+            <img src="image/my.jpg" alt="image">
+            <h3 class="name">abc</h3>
+            <p class="describe">it is a project</p>
+        </div>
+        <div class="card swiper-slide">
+            <img src="image/one.png" alt="image">
+            <h3 class="name">pqr</h3>
+            <p class="describe">it is a project</p>
+        </div>
+        <div class="card swiper-slide">
+            <img src="image/two.png" alt="image">
+            <h3 class="name">pqr</h3>
+            <p class="describe">it is a project</p>
+        </div>
+        <div class="card swiper-slide">
+            <img src="image/three.png" alt="image">
+            <h3 class="name">pqr</h3>
+            <p class="describe">it is a project</p>
+        </div>
+        <div class="card swiper-slide">
+            <img src="image/four.png" alt="image">
+            <h3 class="name">pqr lorem10</h3>
+            <p class="describe">it is a project loren5</p>
+        </div>
+
+    </div>
+    <div class="swiper-pagination"></div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    
+    </div>
+
+</section>
+
+<!-- contact me -->
+<section class="contact" id="contact">
+    <h2 class="heading">Contact <span>Me!</span></h2>
+
+    <form id="contact-form">
+        <div class="input-box">
+            <input type="text" id="name" placeholder="Full Name">
+            <input type="email" id="email" placeholder="Email Address">
+        </div>
+        <div class="input-box">
+            <input type="number" id="mobile" placeholder="Mobile Number">
+            <input type="text" id="subject" placeholder="Email Subject">
+        </div>
+        <textarea name="" id="message" cols="30" rows="10" placeholder="Enter your message" ></textarea>
+        <input type="submit" value="Send Message" class="btn">
+    </form>
+</section>
+
+<footer class="footer">
+
+    <div class="footerbg">
+        <div class="footer-container">
+            <div class="">
+                <h1 class="tittle-footer">Kritika Garg</h1>
+                <span class="footer-subtittle">Fullstack Developer</span>
+            </div>
+            
+            <ul class="link-footer">
+                <li>
+                <a href="#skills">Skills</a>
+                </li>
+                <li>
+                <a href="#contact">Connect</a>
+                </li>
+                <li>
+                <a href="#work">Work</a>
+                </li>
+            </ul>
+
+            <div class="social-media-footer">
+                <a href="#"><i class='bx bxl-instagram'></i></a>
+                <a href="https://x.com/kritikaagarg"><i class="bx bxl-twitter"></i></a>
+                <a href="https://www.linkedin.com/in/kritika-garg-14158a23b/"><i class="bx bxl-linkedin"></i></a>
+                <a href="https://github.com/kritikaspidy"><i class="bx  bxl-github"></i></a>
+            </div>
+        </div>
+        <!-- <p></p> -->
+    </div>
+</footer>
+
+  <script src="scripts.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script src="swiper-bundle.min.js"></script>
+</body>
+
+</html>
+
