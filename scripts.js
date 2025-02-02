@@ -73,12 +73,15 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-var typed =  new Typed(".typing",{
-    strings: ["Fullstack Developer" , "Software Designer"],
-    typeSpeed:100,
-    BackSpeed:40,
-    loop: true
-})
+document.addEventListener("DOMContentLoaded", function() {
+    var typed = new Typed(".typing", {
+        strings: ["Fullstack Developer", "Software Designer"],
+        typeSpeed: 100,
+        backSpeed: 40,
+        loop: true
+    });
+});
+
 
 // Functionality to animate progress bars as the user scrolls to the skills section
 window.addEventListener('scroll', function () {
