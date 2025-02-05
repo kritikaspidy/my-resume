@@ -107,6 +107,11 @@ document.addEventListener("DOMContentLoaded", function () {
     let swiper = new Swiper(".swiper", {
         spaceBetween: 24,
         loop: true,
+        autoplay: {
+            delay: 2500, 
+            disableOnInteraction: false,
+        },
+        slidesPerView: 1,
         grabCursor: true,
         pagination: {
             el: ".swiper-pagination",
