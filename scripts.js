@@ -205,11 +205,19 @@ document.getElementById("contact-form").addEventListener("submit", function (eve
 document.addEventListener("DOMContentLoaded", function () {
     const hamburger = document.getElementById("hamburger");
     const navbar = document.querySelector(".navbar");
+    const navLinks = document.querySelectorAll(".navbar a");
 
     hamburger.addEventListener("click", function () {
         navbar.classList.toggle("active");
     });
+
+    navLinks.forEach(link => {
+        link.addEventListener("click", function () {
+            navbar.classList.remove("active");  // Closes menu after clicking a link
+        });
+    });
 });
+
 
 
 
