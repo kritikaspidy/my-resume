@@ -140,26 +140,38 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("contact-form").addEventListener("submit", function (event) {
         event.preventDefault();
 
-        let params = {
-            name: document.getElementById("name").value,
-            email: document.getElementById("email").value,
-            mobile: document.getElementById("mobile").value,
-            subject: document.getElementById("subject").value,
-            message: document.getElementById("message").value
-        };
+        // Get form values
+        let name = document.getElementById("name").value.trim();
+        let email = document.getElementById("email").value.trim();
+        let mobile = document.getElementById("mobile").value.trim();
+        let subject = document.getElementById("subject").value.trim();
+        let message = document.getElementById("message").value.trim();
 
-        console.log("Sending message with params:", params);
+        // Validate input fields
+        if (name === "" || email === "" || message === "") {
+            alert("Please fill out all required fields.");
+            return;
+        }
 
+        // Prepare parameters for email
+        let params = { name, email, mobile, subject, message };
+
+        console.log("Sending message with params:", params); // Debugging log
+
+        // Send email using EmailJS
         emailjs.send("service_06g5u91", "template_wafq7p1", params)
             .then(function (response) {
                 alert("Message sent successfully!");
-                document.getElementById("contact-form").reset();
-            }, function (error) {
+                document.getElementById("contact-form").reset(); // Clear form after submission
+            })
+            .catch(function (error) {
                 alert("Failed to send message. Try again later.");
                 console.error("EmailJS Error:", error);
             });
     });
 });
+
+
 
 // Get the elements
 const sidebar = document.getElementById('sidebar');
@@ -175,4 +187,30 @@ sidebarToggle.addEventListener('click', () => {
 closeBtn.addEventListener('click', () => {
     sidebar.classList.remove('active');
 });
+
+document.getElementById("contact-form").addEventListener("submit", function (event) {
+    event.preventDefault();
+    let name = document.getElementById("name").value.trim();
+    let email = document.getElementById("email").value.trim();
+    let message = document.getElementById("message").value.trim();
+    
+    if (name === "" || email === "" || message === "") {
+        alert("Please fill out all fields.");
+        return;
+    }
+
+    // Proceed with EmailJS sending
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    const hamburger = document.getElementById("hamburger");
+    const navbar = document.querySelector(".navbar");
+
+    hamburger.addEventListener("click", function () {
+        navbar.classList.toggle("active");
+    });
+});
+
+
+
 
