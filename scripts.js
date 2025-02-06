@@ -75,7 +75,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 document.addEventListener("DOMContentLoaded", function() {
     var typed = new Typed(".typing", {
-        strings: ["Fullstack Developer", "Software Designer"],
+        strings: ["Fullstack Engineer", "Software Developer"],
         typeSpeed: 100,
         backSpeed: 40,
         loop: true
